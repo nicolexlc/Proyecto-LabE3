@@ -1,0 +1,51 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+entity contad is
+Port ( CLK : in STD_LOGIC;
+a : in integer range 0 to 9;
+c : in integer range 0 to 9;
+
+Enable : out STD_LOGIC_VECTOR (2 downto 0);
+Display : out STD_LOGIC_VECTOR (7 downto 0));
+end contad;
+architecture Behavioral of contad is
+signal delay_mux : integer range 0 to 11999 := 0;
+signal contad : integer range 0 to 9 := 0;
+signal b: integer range 0 to 2 := 0;
+begin
+process (CLK)
+begin
+if (rising_edge(CLK))then
+if(delay_mux = 11999) then
+if(b <= 0) then
+b <= b+1;
+else
+b <= 0;
+end if;
+delay_mux <= 0;
+else
+delay_mux <= delay_mux + 1;
+end if;
+case b is 
+when 1 => Enable <= "011";
+contad <= c; 
+when 0 => Enable <= "101";
+contad <= a; 
+when others => Enable <= "111";
+end case;
+case contad is
+when 0 => display <= "11000000";
+when 1 => display <= "11111001";
+when 2 => display <= "10100100";
+when 3 => display <= "10110000";
+when 4 => display <= "10011001";
+when 5 => display <= "10010010";
+when 6 => display <= "10000010";
+when 7 => display <= "11111000";
+when 8 => display <= "10000000";
+when 9 => display <= "10010000";
+when others => display <="11111111";
+end case;
+end if;
+end process;
+end Behavioral;
