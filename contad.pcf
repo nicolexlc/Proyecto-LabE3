@@ -1,0 +1,18 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Fri Sep 24 22:51:38 2021
+//! **************************************************************************
+
+SCHEMATIC START;
+CONFIG VCCAUX = "3.3";
+COMP "Display<0>" LOCATE = SITE "A5" LEVEL 1;
+COMP "Display<1>" LOCATE = SITE "C6" LEVEL 1;
+COMP "Display<2>" LOCATE = SITE "D6" LEVEL 1;
+COMP "Display<3>" LOCATE = SITE "C5" LEVEL 1;
+COMP "Display<4>" LOCATE = SITE "C4" LEVEL 1;
+COMP "Display<5>" LOCATE = SITE "A4" LEVEL 1;
+COMP "Display<6>" LOCATE = SITE "B4" LEVEL 1;
+COMP "Display<7>" LOCATE = SITE "A3" LEVEL 1;
+COMP "CLK" LOCATE = SITE "V10" LEVEL 1;
+NET "CLK_BUFGP/IBUFG" PERIOD = 10 ns HIGH 50%;
+SCHEMATIC END;
+

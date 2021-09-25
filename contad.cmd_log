@@ -1,0 +1,18 @@
+xst -intstyle ise -ifn "C:/Users/daesb/E32Fase/contad.xst" -ofn "C:/Users/daesb/E32Fase/contad.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc MimasV2.ucf -p xc6slx9-csg324-3 contad.ngc contad.ngd  
+map -intstyle ise -p xc6slx9-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o contad_map.ncd contad.ngd contad.pcf 
+par -w -intstyle ise -ol high -mt off contad_map.ncd contad.ncd contad.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml contad.twx contad.ncd -o contad.twr contad.pcf -ucf MimasV2.ucf 
+bitgen -intstyle ise -f contad.ut contad.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc MimasV2.ucf -p xc6slx9-csg324-3 contad.ngc contad.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc MimasV2.ucf -p xc6slx9-csg324-3 contad.ngc contad.ngd  
+map -intstyle ise -p xc6slx9-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o contad_map.ncd contad.ngd contad.pcf 
+par -w -intstyle ise -ol high -mt off contad_map.ncd contad.ncd contad.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml contad.twx contad.ncd -o contad.twr contad.pcf -ucf MimasV2.ucf 
+bitgen -intstyle ise -f contad.ut contad.ncd 
+xst -intstyle ise -ifn "C:/Users/daesb/E32Fase/contad.xst" -ofn "C:/Users/daesb/E32Fase/contad.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc MimasV2.ucf -p xc6slx9-csg324-3 contad.ngc contad.ngd  
+map -intstyle ise -p xc6slx9-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o contad_map.ncd contad.ngd contad.pcf 
+par -w -intstyle ise -ol high -mt off contad_map.ncd contad.ncd contad.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml contad.twx contad.ncd -o contad.twr contad.pcf -ucf MimasV2.ucf 
+bitgen -intstyle ise -f contad.ut contad.ncd 
